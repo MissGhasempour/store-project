@@ -13,31 +13,7 @@ const ShoppingCart = () => {
 
   const remove = (id) => {
     if (id == 1) {
-      // const find = productName.find((name) => {
-      //   return name == count[0];
-      // })
-      // // console.log(find);
-      // const index = productName.findIndex((name) => {
-      //   return name == products[0].name;
-      // });
-      // console.log(index);
-      // const indexOf = productName.indexOf(products[0].name);
-      // console.log(indexOf);
-      // const indexOfCount = productName.indexOf(count[0]);
-      // const different = indexOfCount - indexOf;
-      // productName.splice(indexOf, different)
-      // const filterProductName = productName.filter((name) => {
-      //   // console.log(name[0]);
-      //   // const counter = productName.includes(count[0]);
-      //   // console.log(counter);
-      //   count[0] = 0;
-      //   return (name !== products[0].name);
-      //   // && name !== productName[index + 1]
-      // })
-      // console.log(filter);
-
-      // setProductName(filterProductName);
-      // productName.splice(indexOf, 1);
+   
       productName.map(({ name }) => {
         if (name === products[0].name) {
           count[0] = 0;
@@ -47,19 +23,7 @@ const ShoppingCart = () => {
         //console.log(name);
       });
 
-      // const filterProductCost = productCost.filter((cost) => {
-      //   return cost !== products[0].cost;
-      // });
-      // setProductCost([filterProductCost]);
-      // productCost.filter(({ cost ,count}) => {
-      //   return cost !== products[0].cost;
-      // })
-
-      // const index = productCost.findIndex((product) => {
-      //   return product.cost === products[0].cost;
-      // })
-      // console.log(index);
-      // productCost.splice(index, 1);
+    
 
       const filter = productCost.filter((product) => {
         mount[0] = 0;
@@ -127,12 +91,7 @@ const ShoppingCart = () => {
   };
   const reduce = (id) => {
     if (id == 1) {
-      //const lastItem = productName[productName.length - 1];
-      // const index = productName.indexOf((name) => {
-      //   return 0
-      // });
-      // console.log(index);
-      //  productName.splice(productName.length - 1, lastItem, count[0]--);
+      
       if (count[0] > 1) {
         count[0]--;
         setProductName([{ name: products[0].name, count: count[0] }]);
@@ -148,14 +107,7 @@ const ShoppingCart = () => {
         filter.push({ cost: products[0].cost, count: mount[0] });
         setProductCost(filter);
       }
-      // if (count[0] < 1) {
-      //   console.log('please press remove button...')
-
-      // }
-      // const index = productCost.findIndex((cost) => {
-      //   return cost === products[0].cost;
-      // });
-      // productCost.splice(index, 1);
+    
     }
     if (id == 2) {
       if (count[1] > 1) {
@@ -172,12 +124,6 @@ const ShoppingCart = () => {
         filter.push({ cost: products[1].cost, count: mount[1] });
         setProductCost(filter);
       }
-      // console.log(index)
-      // const filter = productCost.filter((cost) => {
-      //   return cost !== productCost[index];
-      // });
-      // setProductCost(filter);
-      //productCost.splice(index, 1);
     }
     if (id == 3) {
       if (count[2] > 1) {
@@ -323,20 +269,7 @@ const ShoppingCart = () => {
     }
   };
 
-  // for (let i = 0; i < productName.length; i++){
-  //   if (productName.includes(products[0].name)) {
-  //     count++;
-  //     console.log(count);
-  //   }
-  //   // if (count > 1) {
-  //   //   productName.pop();
-  //   // }
-  // }
-
-  // console.log(btns[0].__reactProps$jclumx9nnq9.onClick)
-  // btns[0].addEventListener('click', () => {
-  //   handleClick('h')
-  // })
+ 
   return (
     <>
       <div className="header-img"></div>
